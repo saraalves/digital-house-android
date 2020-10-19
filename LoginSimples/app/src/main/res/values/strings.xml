@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">LoginSimples</string>
+    <string name="foobar">FOOBAR</string>
+    <string name="sign_up">SIGN UP</string>
+    <string name="login">LOGIN</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+</resources>
