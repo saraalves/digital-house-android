@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">CalculoSalario</string>
+    <string name="horas_trabalhadas">Horas trabalhadas</string>
+    <string name="_180">180</string>
+    <string name="valor_da_hora">Valor da hora</string>
+    <string name="_15">15</string>
+    <string name="r">R$</string>
+</resources>
