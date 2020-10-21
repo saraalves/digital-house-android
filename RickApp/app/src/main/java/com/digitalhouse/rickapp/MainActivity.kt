@@ -7,6 +7,7 @@ import com.digitalhouse.rickapp.api.Personagem
 import com.digitalhouse.rickapp.api.RickApi
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.item_lista.*
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,7 +19,7 @@ class MainActivity : AppCompatActivity() {
             override fun obtevePersonagens(personagens: List<Personagem>) {
                 Picasso.get()
                         .load(personagens[0].imagemUrl)
-                        .into(minhaImagem)
+                        .into(imageView1)
             }
         })
     }
