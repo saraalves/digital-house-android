@@ -1,5 +1,6 @@
 package com.digitalhouse.rickapp
 
+import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
@@ -39,14 +40,15 @@ class RickAdapter(private val dataSet: List<Personagem>) :
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RickViewHolder {
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_lista, parent, false)
+
+        return RickViewHolder(view)
 
     }
 
-    override fun getItemCount(): Int {
-        TODO("Not yet implemented")
-    }
+    override fun getItemCount(): Int = dataSet.size
 
     override fun onBindViewHolder(holder: RickViewHolder, position: Int) {
-        TODO("Not yet implemented")
+        holder.bind(dataSet[position])
     }
 }
