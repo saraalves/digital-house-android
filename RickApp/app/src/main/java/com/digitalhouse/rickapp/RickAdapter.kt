@@ -19,7 +19,7 @@ class RickAdapter(private val dataSet: List<Personagem>) :
         private val txtLife: TextView = view.findViewById(R.id.txtLife)
         private val txtRaca: TextView = view.findViewById(R.id.txtRaca)
         private val txtLocation: TextView = view.findViewById(R.id.txtLocation)
-        private val txtPlanet: TextView = view.findViewById(R.id.txtPlanet)
+//        private val txtPlanet: TextView = view.findViewById(R.id.txtPlanet)
 
         fun bind(personagem: Personagem){
 
@@ -37,8 +37,6 @@ class RickAdapter(private val dataSet: List<Personagem>) :
         }
 
     }
-
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RickViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_lista, parent, false)
 
