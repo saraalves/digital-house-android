@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="8dp"
+    android:background="@color/colorPrimary"
     tools:context=".DetalheActivity">
 
     <ImageView
@@ -22,6 +23,7 @@
         android:layout_height="wrap_content"
         tools:text="Nome"
         android:layout_marginTop="16dp"
+        android:textColor="@color/colorAlmostWhite"
         app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@id/imageView"/>
@@ -32,6 +34,7 @@
         android:layout_height="wrap_content"
         tools:text="Genero"
         android:layout_marginTop="16dp"
+        android:textColor="@color/colorAlmostWhite"
         app:layout_constraintStart_toStartOf="@+id/txtName"
         app:layout_constraintEnd_toEndOf="@+id/txtName"
         app:layout_constraintTop_toBottomOf="@id/txtName"/>
@@ -41,6 +44,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:textColor="@color/colorAlmostWhite"
         tools:text="Planete"
         app:layout_constraintStart_toStartOf="@+id/txtGenero"
         app:layout_constraintEnd_toEndOf="@+id/txtGenero"
