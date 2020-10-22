@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
     android:layout_margin="16dp"
-    android:clickable="true"
+    app:cardCornerRadius="5dp"
     android:focusable="true"
-    app:cardCornerRadius="16dp">
+    android:clickable="true">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary"
         android:padding="8dp">
 
         <ImageView
             android:id="@+id/imageView1"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"/>
@@ -31,7 +31,8 @@
             android:text="Nome"
             android:textColor="@color/colorAlmostWhite"
             android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toStartOf="@id/imageView1"
+            app:layout_constraintEnd_toEndOf="@+id/imageView1"
             app:layout_constraintTop_toBottomOf="@+id/imageView1"/>
 
         <TextView
@@ -42,7 +43,8 @@
             android:maxLines="1"
             android:ellipsize="end"
             android:textColor="@color/colorAlmostWhite"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/imageView1"
+            app:layout_constraintEnd_toEndOf="@+id/imageView1"
             app:layout_constraintTop_toBottomOf="@+id/txtName"
             tools:text="Fulano de tal" />
 
