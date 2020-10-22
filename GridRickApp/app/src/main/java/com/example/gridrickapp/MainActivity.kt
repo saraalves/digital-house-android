@@ -2,6 +2,7 @@ package com.example.gridrickapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -15,20 +16,29 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val viewGridManager = GridLayoutManager(this, 2)
-        val recyclerView = findViewById<RecyclerView>(R.id.minhaLista)
+
 
         RickApi.getData(this, object : IRespostaDaApi {
             override fun obtevePersonagens(personagens: List<Personagem>) {
+                criarLista(personagens  )
 
-                val viewAdapter = RickGridAdapter(personagens)
-                recyclerView.apply {
-                    setHasFixedSize(true)
-                    layoutManager = viewGridManager
-                    adapter = viewAdapter
                 }
-
-            }
         })
     }
+
+    fun criarLista(personagens: List<Personagem>) {
+        val recyclerView = findViewById<RecyclerView>(R.id.minhaLista)
+        val viewGridManager = GridLayoutManager(this, 2)
+
+            val viewAdapter = RickGridAdapter(personagens) {
+                Toast.makeText(this, it.nome, Toast.LENGTH_LONG).show()
+        }
+
+        recyclerView.apply {
+            setHasFixedSize(true)
+            layoutManager = viewGridManager
+            adapter = viewAdapter
+        }
+    }
+
 }

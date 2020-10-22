@@ -10,7 +10,7 @@ import com.example.gridrickapp.api.Personagem
 import com.squareup.picasso.Picasso
 
 
-class RickGridAdapter(private val dataSet: List<Personagem>) :
+class RickGridAdapter(private val dataSet: List<Personagem>, private val listener: (Personagem) -> Unit) :
     RecyclerView.Adapter<RickGridAdapter.RickViewHolder>() {
 
     class RickViewHolder(view: View) : RecyclerView.ViewHolder(view) {
@@ -29,7 +29,6 @@ class RickGridAdapter(private val dataSet: List<Personagem>) :
                 .load(personagem.imagemUrl)
                 .into(imagem)
         }
-
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RickViewHolder {
@@ -41,7 +40,9 @@ class RickGridAdapter(private val dataSet: List<Personagem>) :
     override fun getItemCount(): Int = dataSet.size
 
     override fun onBindViewHolder(holder: RickViewHolder, position: Int) {
-        holder.bind(dataSet[position])
+        val item = dataSet[position]
+        holder.bind(item)
+        holder.itemView.setOnClickListener{ listener(item) }
     }
 
 
