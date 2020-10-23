@@ -26,5 +26,9 @@ class MainActivity : AppCompatActivity() {
         )
 
         pager.adapter = ViewPagerAdapter(fragments, titulos, supportFragmentManager)
+
+        tab.getTabAt(0)!!.setIcon(R.drawable.ic_baseline_home_24)
+        tab.getTabAt(1)!!.setIcon(R.drawable.ic_baseline_menu_book_24)
+        tab.getTabAt(2)!!.setIcon(R.drawable.ic_baseline_star_24)
     }
 }
