@@ -7,12 +7,12 @@
     tools:context=".MainActivity">
 
     <androidx.viewpager.widget.ViewPager
-        android:id="@+id/view_pager"
+        android:id="@+id/viewPager"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <TableLayout
-            android:id="@+id/tab_layout"
+            android:id="@+id/tabLayout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
