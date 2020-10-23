@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         )
 
         val titulos = listOf(
-           "Home", "Biblioteca", "Favoritos"
+           getString(R.string.home), getString(R.string.biblioteca), getString(R.string.favoritos)
         )
 
         pager.adapter = ViewPagerAdapter(fragments, titulos, supportFragmentManager)
