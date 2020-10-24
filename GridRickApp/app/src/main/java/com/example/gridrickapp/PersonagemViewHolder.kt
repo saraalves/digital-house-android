@@ -10,9 +10,11 @@ import com.squareup.picasso.Picasso
 class PersonagemViewHolder (private val view: View): RecyclerView.ViewHolder(view) {
     private val imagem: ImageView = view.findViewById(R.id.imageView1)
     private val nome: TextView = view.findViewById(R.id.txtName2)
+    private val genero: TextView = view.findViewById(R.id.txtGenero)
 
     fun bind (personagem: Personagem) {
         nome.text = personagem.nome
+        genero.text = personagem.genero
 
         Picasso.get()
             .load(personagem.imagemUrl)

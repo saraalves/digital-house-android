@@ -1,5 +1,6 @@
 package com.example.gridrickapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -16,29 +17,46 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
+        val viewGridManager = GridLayoutManager(this, 2)
 
         RickApi.getData(this, object : IRespostaDaApi {
             override fun obtevePersonagens(personagens: List<Personagem>) {
-                criarLista(personagens  )
+//                criarLista(personagens)
 
+                val recyclerView = findViewById<RecyclerView>(R.id.minhaLista)
+                val viewGridAdapter = RickGridAdapter(personagens) {
+                    val intent = Intent(this@MainActivity, DetalheActivity::class.java)
+                    intent.putExtra("Nome", it.nome)
+                    intent.putExtra("Genero", it.genero)
+                    intent.putExtra("Location", it.localizacao.nome)
+                    intent.putExtra("Imagem", it.imagemUrl)
+                    startActivity(intent)
                 }
+
+                recyclerView.apply {
+                    setHasFixedSize(true)
+                    layoutManager = viewGridManager
+                    adapter = viewGridAdapter
+                }
+            }
         })
     }
 
-    fun criarLista(personagens: List<Personagem>) {
-        val recyclerView = findViewById<RecyclerView>(R.id.minhaLista)
-        val viewGridManager = GridLayoutManager(this, 2)
-
-            val viewAdapter = RickGridAdapter(personagens) {
-                Toast.makeText(this, it.nome, Toast.LENGTH_LONG).show()
-        }
-
-        recyclerView.apply {
-            setHasFixedSize(true)
-            layoutManager = viewGridManager
-            adapter = viewAdapter
-        }
-    }
+//    fun criarLista(personagens: List<Personagem>) {
+//        val recyclerView = findViewById<RecyclerView>(R.id.minhaLista)
+//        val viewGridManager = GridLayoutManager(this, 2)
+//
+//        var toast: Toast? = null
+//
+//        val viewAdapter = RickGridAdapter(personagens) {
+//           val intent = Intent(this@MainActivity, DetalheActivity::class.java)
+//        }
+//
+//        recyclerView.apply {
+//            setHasFixedSize(true)
+//            layoutManager = viewGridManager
+//            adapter = viewAdapter
+//        }
+//    }
 
 }

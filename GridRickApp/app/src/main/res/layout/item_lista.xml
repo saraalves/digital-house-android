@@ -51,5 +51,18 @@
             app:layout_constraintTop_toBottomOf="@+id/txtName"
             tools:text="Fulano de tal" />
 
+        <TextView
+            android:id="@+id/txtGenero"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:maxLines="1"
+            android:textSize="16dp"
+            android:ellipsize="end"
+            android:textColor="@color/colorAlmostWhite"
+            app:layout_constraintStart_toStartOf="@+id/imageView1"
+            app:layout_constraintEnd_toEndOf="@+id/imageView1"
+            app:layout_constraintTop_toBottomOf="@+id/txtName2"
+            tools:text="Genero" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>
