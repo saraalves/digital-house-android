@@ -19,8 +19,8 @@ class MainActivity : AppCompatActivity() {
         val titulo = listOf("Sign in", "Sign up")
 
         val fragment = listOf(
-            SingInFragment.newInstance("Sara", "Alves"),
-            SignUpFragment.newInstance("", "")
+            SingInFragment.newInstance(""),
+            SignUpFragment.newInstance("", "", "")
         )
 
         pager.adapter = ViewPagerAdapter(fragment, titulo, supportFragmentManager)

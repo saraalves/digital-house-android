@@ -70,6 +70,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
+            android:enabled="false"
             android:text="Sign up"
             android:background="@drawable/bg_gradiente_roxo_button"
             android:textColor="@color/coloWhite"
