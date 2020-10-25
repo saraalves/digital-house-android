@@ -90,6 +90,7 @@
             android:layout_gravity="center"
             android:text="@string/sign_up"
             android:textSize="16sp"
+            android:enabled="false"
             android:background="@color/colorMain"
             android:foreground="?android:attr/selectableItemBackgroundBorderless"
             android:layout_marginTop="50dp"/>

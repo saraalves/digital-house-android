@@ -3,6 +3,7 @@ package com.digitalhouse.fakeloginapp
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import com.digitalhouse.fakeloginapp.R
 import com.digitalhouse.fakeloginapp.users.UserService
 import kotlinx.android.synthetic.main.activity_main.*
@@ -27,16 +28,25 @@ class SignUpActivity : AppCompatActivity() {
             val email = edtEmailSignUp.text.toString()
             val password = edtEmailSignUp.text.toString()
 
-            if(nome.isEmpty() && email.isEmpty() && password.isEmpty()) {
-                edtNameSignUp.error = "Campo vazio"
-                edtEmailSignUp.error = "Campo vazio"
-                edtPasswordSignUp.error = "Campo vazio"
-            }
-            try {
-                UserService.register(nome, email, password)
-
-            } catch (e: Exception){
-
+            when {
+                nome.isEmpty() -> {
+                    edtNameSignUp.error = "Campo vazio"
+                }
+                email.isEmpty() -> {
+                    edtEmailSignUp.error = "Campo vazio"
+                }
+                password.isEmpty() -> {
+                    edtPasswordSignUp.error = "Campo vazio"
+                }
+                else -> {
+                    try {
+                        UserService.register(nome, email, password)
+                        Toast.makeText(this, "Cadastro realizado com sucesso", Toast.LENGTH_SHORT).show()
+                        finish()
+                    } catch (e: Exception){
+                        Toast.makeText(this, e.message, Toast.LENGTH_LONG).show()
+                    }
+                }
             }
 
         }
