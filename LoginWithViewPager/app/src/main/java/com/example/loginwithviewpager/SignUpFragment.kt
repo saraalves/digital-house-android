@@ -36,11 +36,18 @@ class SignUpFragment : Fragment() {
             btnSignup.isEnabled = isChecked
         }
 
+        registerUser()
+
+        return minhaView
+    }
+
+    private fun registerUser() {
         val btnSignup = minhaView.findViewById<Button>(R.id.btnSignup)
         btnSignup.setOnClickListener {
             val username = minhaView.findViewById<TextInputLayout>(R.id.edtUsernameSignup)
             val password = minhaView.findViewById<TextInputLayout>(R.id.edtPasswordSignup)
-            val confirmPassword = minhaView.findViewById<TextInputLayout>(R.id.edtRepetPasswordSignup)
+            val confirmPassword =
+                minhaView.findViewById<TextInputLayout>(R.id.edtRepetPasswordSignup)
 
             val usernameText = username.editText?.text.toString()
             val passwordText = password.editText?.text.toString()
@@ -78,8 +85,6 @@ class SignUpFragment : Fragment() {
                 }
             }
         }
-
-        return minhaView
     }
 
     companion object {

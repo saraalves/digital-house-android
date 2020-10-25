@@ -36,12 +36,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/password"
+
             app:layout_constraintTop_toBottomOf="@+id/edtUsername"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:inputType="numberPassword"
                 android:drawableRight="@drawable/ic_baseline_visibility_off_24" />
         </com.google.android.material.textfield.TextInputLayout>
 

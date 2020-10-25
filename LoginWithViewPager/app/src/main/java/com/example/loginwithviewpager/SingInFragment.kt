@@ -29,6 +29,12 @@ class SingInFragment : Fragment() {
     ): View? {
         minhaView = inflater.inflate(R.layout.fragment_sing_in, container, false)
 
+        loginUser()
+
+        return minhaView
+    }
+
+    private fun loginUser() {
         val btnLogin = minhaView.findViewById<Button>(R.id.btnLogin)
         btnLogin.setOnClickListener {
             val username = minhaView.findViewById<TextInputLayout>(R.id.edtUsername)
@@ -67,8 +73,6 @@ class SingInFragment : Fragment() {
             }
 
         }
-
-        return minhaView
     }
 
     companion object {
