@@ -28,13 +28,6 @@ class SignUpFragment : Fragment() {
     ): View? {
         minhaView = inflater.inflate(R.layout.fragment_sign_up, container, false)
 
-        val username = minhaView.findViewById<TextInputLayout>(R.id.edtUsernameSignup)
-        val password = minhaView.findViewById<TextInputLayout>(R.id.edtPasswordSignup)
-        val confirmPassword = minhaView.findViewById<TextInputLayout>(R.id.edtRepetPasswordSignup)
-
-        val usernameText = username.editText?.text.toString()
-        val passwordText = password.editText?.text.toString()
-        val confirmPasswordText = confirmPassword.editText?.text.toString()
 
         val checkBox = minhaView.findViewById<CheckBox>(R.id.checkbox)
 
@@ -45,6 +38,14 @@ class SignUpFragment : Fragment() {
 
         val btnSignup = minhaView.findViewById<Button>(R.id.btnSignup)
         btnSignup.setOnClickListener {
+            val username = minhaView.findViewById<TextInputLayout>(R.id.edtUsernameSignup)
+            val password = minhaView.findViewById<TextInputLayout>(R.id.edtPasswordSignup)
+            val confirmPassword = minhaView.findViewById<TextInputLayout>(R.id.edtRepetPasswordSignup)
+
+            val usernameText = username.editText?.text.toString()
+            val passwordText = password.editText?.text.toString()
+            val confirmPasswordText = confirmPassword.editText?.text.toString()
+
             when {
                 usernameText.isEmpty() -> {
                     username.error = "Preencha o campo username"

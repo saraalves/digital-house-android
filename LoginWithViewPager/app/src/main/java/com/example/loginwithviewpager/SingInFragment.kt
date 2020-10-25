@@ -29,14 +29,13 @@ class SingInFragment : Fragment() {
     ): View? {
         minhaView = inflater.inflate(R.layout.fragment_sing_in, container, false)
 
-        val username = minhaView.findViewById<TextInputLayout>(R.id.edtUsername)
-        val password = minhaView.findViewById<TextInputLayout>(R.id.edtPassword)
-
-        val usernameText = username.editText?.text.toString()
-        val passwordText = password.editText?.text.toString()
-
         val btnLogin = minhaView.findViewById<Button>(R.id.btnLogin)
         btnLogin.setOnClickListener {
+            val username = minhaView.findViewById<TextInputLayout>(R.id.edtUsername)
+            val password = minhaView.findViewById<TextInputLayout>(R.id.edtPassword)
+
+            val usernameText = username.editText?.text.toString()
+            val passwordText = password.editText?.text.toString()
             when {
                 usernameText.isEmpty() -> {
                     username.error = "Preencha o campo username"
