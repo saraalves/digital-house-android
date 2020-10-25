@@ -19,7 +19,8 @@
             android:hint="@string/username"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toTopOf="parent"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
@@ -32,7 +33,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/password"
-            app:layout_constraintTop_toBottomOf="@+id/edtUsernameSignup">
+            app:layout_constraintTop_toBottomOf="@+id/edtUsernameSignup"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
@@ -46,7 +48,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/password"
-            app:layout_constraintTop_toBottomOf="@+id/edtPasswordSignup">
+            app:layout_constraintTop_toBottomOf="@+id/edtPasswordSignup"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
@@ -68,6 +71,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:text="Sign up"
+            android:background="@drawable/bg_gradiente_roxo_button"
+            android:textColor="@color/coloWhite"
             android:textStyle="bold"
             app:layout_constraintTop_toBottomOf="@+id/checkbox" />
 

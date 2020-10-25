@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    app:cardCornerRadius="10dp"
     tools:context=".SingInFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -19,7 +21,8 @@
             android:hint="@string/username"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toTopOf="parent"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
@@ -27,12 +30,14 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
+
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/edtPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/password"
-            app:layout_constraintTop_toBottomOf="@+id/edtUsername">
+            app:layout_constraintTop_toBottomOf="@+id/edtUsername"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
@@ -43,10 +48,12 @@
             android:id="@+id/btnLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="60dp"
             android:text="@string/log_in"
+            android:background="@drawable/bg_gradiente_roxo_button"
             android:textStyle="bold"
+            android:textColor="@color/coloWhite"
             app:layout_constraintTop_toBottomOf="@+id/edtPassword" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-</FrameLayout>
+</androidx.cardview.widget.CardView>
