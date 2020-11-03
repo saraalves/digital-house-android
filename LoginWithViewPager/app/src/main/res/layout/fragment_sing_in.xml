@@ -15,7 +15,7 @@
         android:padding="16dp">
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/edtUsername"
+            android:id="@+id/txtUserNameLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/username"
@@ -25,6 +25,7 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtUsername"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
@@ -32,15 +33,15 @@
 
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/edtPassword"
+            android:id="@+id/txtPasswordLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/password"
-
-            app:layout_constraintTop_toBottomOf="@+id/edtUsername"
+            app:layout_constraintTop_toBottomOf="@+id/txtUserNameLogin"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="numberPassword"
@@ -56,7 +57,31 @@
             android:background="@drawable/bg_gradiente_roxo_button"
             android:textStyle="bold"
             android:textColor="@color/coloWhite"
-            app:layout_constraintTop_toBottomOf="@+id/edtPassword" />
+            app:layout_constraintTop_toBottomOf="@+id/txtPasswordLogin" />
+
+        <TextView
+            android:id="@+id/txtor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/or"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@+id/btnLogin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:id="@+id/btnSignUpLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/sign_up"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>

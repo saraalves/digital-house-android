@@ -13,7 +13,7 @@
         android:padding="16dp">
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/edtUsernameSignup"
+            android:id="@+id/txtUserNameLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/username"
@@ -23,6 +23,7 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtUserNameSignup"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
@@ -33,7 +34,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/password"
-            app:layout_constraintTop_toBottomOf="@+id/edtUsernameSignup"
+            app:layout_constraintTop_toBottomOf="@+id/txtUserNameLogin"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -70,7 +71,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:enabled="false"
             android:text="Sign up"
             android:background="@drawable/bg_gradiente_roxo_button"
             android:textColor="@color/coloWhite"
