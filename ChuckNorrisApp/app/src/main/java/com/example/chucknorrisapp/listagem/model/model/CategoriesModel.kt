@@ -1,4 +1,4 @@
-package com.example.chucknorrisapp.model.model
+package com.example.chucknorrisapp.listagem.model.model
 
 import com.google.gson.annotations.SerializedName
 
