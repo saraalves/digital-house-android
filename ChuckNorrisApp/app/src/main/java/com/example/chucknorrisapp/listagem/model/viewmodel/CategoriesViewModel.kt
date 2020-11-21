@@ -10,18 +10,17 @@ import kotlinx.coroutines.Dispatchers
 
 class CategoriesViewModel(private val repository: CategoriesRepository): ViewModel() {
 
-    private lateinit var _categorias: MutableList<String>
+    private var _categorias: MutableList<String> = mutableListOf()
 
     fun obterLista() = liveData(Dispatchers.IO) {
 
-        val response = repository.obterLista()
-        _categorias = response as MutableList<String>
+        val response = repository.obterListaCategorias()
 
         emit(response)
 
     }
 
-    class PersonagemViewModelFactory(
+    class CategoriesViewModelFactory(
         private val repository: CategoriesRepository
     ): ViewModelProvider.Factory {
         override fun <T : ViewModel?> create(modelClass: Class<T>): T {
