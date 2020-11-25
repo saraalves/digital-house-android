@@ -95,4 +95,15 @@ class SingInFragment : Fragment() {
         edtPassword.requestFocus()
     }
 
+    /*
+TODO
+    Validar os campos antes de fazer o sign up e exibir erros sempre que possivel
+        - Checagem de senhas iguais
+        - Tamanho minimo 8 caracteres
+        - username tem que ter valor
+        - Checage de checkbox
+    Quando clicar em Sign Up limpar todos os campos dessa tela
+        - Limpar também o campo de senha da tela de login
+ */
+
 }
