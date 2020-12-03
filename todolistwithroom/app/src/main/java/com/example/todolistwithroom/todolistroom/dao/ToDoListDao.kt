@@ -12,7 +12,7 @@ interface ToDoListDao {
     @Insert
     suspend fun addTarefa(toDolist: ToDoListEntity)
 
-    @Query("SELECT COUNT(*) FROM ToDolist")
+    @Query("SELECT COUNT(*) FROM ToDoListRoom")
     suspend fun count(): Int
 
 }
