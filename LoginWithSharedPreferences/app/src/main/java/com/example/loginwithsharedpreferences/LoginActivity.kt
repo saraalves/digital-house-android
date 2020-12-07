@@ -37,7 +37,6 @@ class LoginActivity : AppCompatActivity() {
         const val APP_NAME = "Aula41_Prefs"
         const val NOTIFICATION_PREFS = "NOTIFICATION_PREFS"
     }
-
 }
 
 
