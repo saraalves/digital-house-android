@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">LoginWithSharedPreferences</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="password">Senha</string>
+    <string name="username">Email</string>
+    <string name="log_in">Entrar</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="or">or</string>
+    <string name="continuar_logado">Manter-me conectado</string>
+</resources>
