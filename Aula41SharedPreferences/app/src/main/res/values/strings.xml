@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Aula41SharedPreferences</string>
+    <string name="habilitar_notificacoes">Habilitar notificações</string>
+</resources>
