@@ -29,7 +29,6 @@ class SplashActivity : AppCompatActivity() {
         }
     }
 
-
     companion object {
         const val APP_NAME = "Aula41_Prefs"
         const val NOTIFICATION_PREFS = "NOTIFICATION_PREFS"
